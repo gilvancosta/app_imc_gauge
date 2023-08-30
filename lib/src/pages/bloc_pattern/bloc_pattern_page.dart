@@ -14,16 +14,20 @@ class ImcBlocPatternPage extends StatefulWidget {
 
 class _ImcBlocPatternPageState extends State<ImcBlocPatternPage> {
   final controller = ImcBlocPatternController();
+
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
   //var imc = 0.0;
 
   @override
   void dispose() {
     controller.dispose();
+
     pesoEC.dispose();
     alturaEC.dispose();
+
     super.dispose();
   }
 
@@ -40,12 +44,15 @@ class _ImcBlocPatternPageState extends State<ImcBlocPatternPage> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                  // usa treamBuilder<ImcState para pegar o valor do imc
                   StreamBuilder<ImcState>(
                       stream: controller.imcOut,
                       builder: (context, snapshot) {
                         var imc = snapshot.data?.imc ?? 0;
                         return ImcGauge(imc: imc);
                       }),
+                  // const ImcGauge(imc: 0),
+
                   // const ImcGauge(imc: 0),
                   const SizedBox(height: 20),
                   StreamBuilder<ImcState>(
@@ -109,7 +116,6 @@ class _ImcBlocPatternPageState extends State<ImcBlocPatternPage> {
                   ElevatedButton(
                     onPressed: () {
                       var formValid = formKey.currentState?.validate() ?? false;
-
                       if (formValid) {
                         var formatter = NumberFormat.simpleCurrency(locale: 'pt_BR', decimalDigits: 2);
                         double peso = formatter.parse(pesoEC.text).toDouble();
