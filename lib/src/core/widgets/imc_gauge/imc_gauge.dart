@@ -3,7 +3,6 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 import 'widgets/imc_gauge_range.dart';
 
-
 class ImcGauge extends StatelessWidget {
   final double imc;
 
@@ -54,7 +53,7 @@ class ImcGauge extends StatelessWidget {
           pointers: [
             NeedlePointer(
               value: imc,
-              enableAnimation: false,
+              enableAnimation: true,
             ),
           ],
         )

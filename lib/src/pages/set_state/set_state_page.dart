@@ -4,7 +4,6 @@ import 'dart:math';
 import 'package:intl/intl.dart';
 import '../../core/widgets/imc_gauge/imc_gauge.dart';
 
-
 class SetStatePage extends StatefulWidget {
   const SetStatePage({super.key});
 
@@ -53,7 +52,9 @@ class _SetStatePageState extends State<SetStatePage> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                  // =========== ImcGauge ========
                   ImcGauge(imc: imc),
+                  // =========== ImcGauge ========
                   const SizedBox(height: 20),
                   TextFormField(
                       controller: pesoEC,

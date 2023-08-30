@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../core/widgets/drawer/drawer_v1_widget.dart';
+import '../change_notifier/change_notifier_page.dart';
+import '../value_notifer/value_notifer_page.dart';
 
 class HomePageApp extends StatefulWidget {
   final String title;
@@ -37,13 +39,13 @@ class _TabsScreenState extends State<HomePageApp> {
               child: const Text("setState")),
           ElevatedButton(
               onPressed: () {
-                //  Navigator.pushNamed(context, '/value_notifer_page');
-                // _goToPage(context, const ValueNotifierPage());
+                Navigator.pushNamed(context, '/value_notifer_page');
+                _goToPage(context, const ValueNotifierPage());
               },
               child: const Text("ValueNotifier")),
           ElevatedButton(
               onPressed: () {
-                //_goToPage(context, const ImgChangeNotifierPage());
+                _goToPage(context, const ImgChangeNotifierPage());
               },
               child: const Text("ChangeNotofier")),
           ElevatedButton(
