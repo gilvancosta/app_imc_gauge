@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 sealed class ConstantsFonts {
-
-  static const String fontFamilyTheme = 'Poppins';
-  static const String fontFamilyText = 'RobotoCondensed';
+  static const String fontFamilyTheme = 'Tourney';
+  static const String fontFamilyText = 'Tourney';
 }
 
 sealed class ConstantsColors {
@@ -15,9 +14,6 @@ sealed class ConstantsColors {
   static const red = Color(0xFFEB1212);
 
   static const myCanvasColor = Color.fromRGBO(255, 254, 229, 1);
-
-
-
 }
 
 sealed class ConstantsImages {

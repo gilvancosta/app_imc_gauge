@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constantes.dart';
 
-
-
 sealed class MyAppTheme {
   static const defaultInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.all(
@@ -14,11 +12,11 @@ sealed class MyAppTheme {
   );
 
   static ThemeData themeData = ThemeData(
-    useMaterial3: true,
+    useMaterial3: false,
     // colorScheme: ColorScheme.fromSwatch().copyWith(primary: ConstantsColors.primaryColor, secondary: ConstantsColors.secondaryColor),
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 
-  /*   appBarTheme: const AppBarTheme(
+    /*   appBarTheme: const AppBarTheme(
       centerTitle: true,
       iconTheme: IconThemeData(color: ConstantsColors.brow),
       backgroundColor: ConstantsColors.primaryColor,
@@ -41,9 +39,7 @@ sealed class MyAppTheme {
       errorBorder: defaultInputBorder.copyWith(borderSide: const BorderSide(color: ConstantsColors.red)),
     ), */
 
-
-
- /*    elevatedButtonTheme: ElevatedButtonThemeData(
+    /*    elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
         backgroundColor: ConstantsColors.brow,
@@ -53,17 +49,11 @@ sealed class MyAppTheme {
       ),
     ), */
 
-
-
     textTheme: ThemeData.light().textTheme.copyWith(
           titleLarge: const TextStyle(fontSize: 20, fontFamily: ConstantsFonts.fontFamilyText),
         ),
 
-
     canvasColor: ConstantsColors.myCanvasColor,
     fontFamily: ConstantsFonts.fontFamilyTheme,
-
-
-    
   );
 }

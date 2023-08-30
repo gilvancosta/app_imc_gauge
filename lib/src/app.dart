@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'core/ui/theme/app_theme.dart';
 import 'core/utls/app_routes.dart';
-import 'features/home/home_page.dart';
-
+import 'pages/home/home_page.dart';
+import 'pages/set_state/set_state_page.dart';
 
 class MyApp extends StatefulWidget {
   final String title;
@@ -27,6 +27,11 @@ class _MyAppState extends State<MyApp> {
       initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.home: (ctx) => HomePageApp(title: widget.title),
+        '/setstate_page': (_) => const SetStatePage(),
+        // '/imc_calculator': (_) => const ImcCalculatorPage(),
+        // '/value_notifer_page': (_) => const ValueNotifierPage(),
+        // '/change_notifier_page': (_) => const ImgChangeNotifierPage(),
+        // '/imc_bloc_pattern_page': (_) => const ImcBlocPatternPage(),
       },
 
       onGenerateRoute: (settings) {
