@@ -7,12 +7,13 @@ class ImcChangeNotifierController extends ChangeNotifier {
 
   Future<void> calcularImc({required double peso, required double altura}) async {
     imc = 0.0;
-    notifyListeners();
+    notifyListeners(); // para zerar o ponteiro
 
     await Future.delayed(const Duration(seconds: 1));
 
     imc = peso / pow(altura, 2);
 
     notifyListeners();
+
   }
 }

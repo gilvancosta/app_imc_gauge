@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/widgets/drawer/drawer_v1_widget.dart';
+import '../bloc_pattern/bloc_pattern_page.dart';
 import '../change_notifier/change_notifier_page.dart';
 import '../value_notifer/value_notifer_page.dart';
 
@@ -50,7 +51,7 @@ class _TabsScreenState extends State<HomePageApp> {
               child: const Text("ChangeNotofier")),
           ElevatedButton(
               onPressed: () {
-                //_goToPage(context, const ImcBlocPatternPage());
+                _goToPage(context, const ImcBlocPatternPage());
               },
               child: const Text("Bloc Pattern (Streams)")),
         ],

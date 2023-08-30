@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'core/ui/theme/app_theme.dart';
 import 'core/utls/app_routes.dart';
+import 'pages/bloc_pattern/bloc_pattern_page.dart';
 import 'pages/change_notifier/change_notifier_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/set_state/set_state_page.dart';
@@ -33,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         // '/imc_calculator': (_) => const ImcCalculatorPage(),
         '/value_notifer_page': (_) => const ValueNotifierPage(),
        '/change_notifier_page': (_) => const ImgChangeNotifierPage(),
-        // '/imc_bloc_pattern_page': (_) => const ImcBlocPatternPage(),
+      '/imc_bloc_pattern_page': (_) => const ImcBlocPatternPage(),
       },
 
       onGenerateRoute: (settings) {

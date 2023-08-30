@@ -15,7 +15,9 @@ class ImgChangeNotifierPage extends StatefulWidget {
 }
 
 class _ImgChangeNotifierPageState extends State<ImgChangeNotifierPage> {
+
   final controller = ImcChangeNotifierController();
+
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
@@ -44,6 +46,8 @@ class _ImgChangeNotifierPageState extends State<ImgChangeNotifierPage> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+
+                  // =========== aqui Usamos a class AnimatedBuilder  ========
                   AnimatedBuilder(
                       animation: controller,
                       builder: (context, child) {
@@ -52,6 +56,10 @@ class _ImgChangeNotifierPageState extends State<ImgChangeNotifierPage> {
                           imc: controller.imc,
                         );
                       }),
+                      
+                  // =========== ImcGauge ========
+
+
                   const SizedBox(height: 20),
                   TextFormField(
                       controller: pesoEC,
